@@ -1,9 +1,9 @@
 describe('Loggin, search poject and create ticket', () => {
   it('Loggin, search poject and create ticket', async () => {
-    cy.visit('https://id.atlassian.com/login');
-    cy.get('input[name="username"]').type("triori@gmail.com");
+    cy.visit(Cypress.env('loginURL'));
+    cy.get('input[name="username"]').type(Cypress.env('login'));
     cy.get('button[id="login-submit"]').click()
-    cy.get('input[name="password"]').should('be.visible').type('3263985Trolls');
+    cy.get('input[name="password"]').should('be.visible').type(Cypress.env('password'));
     cy.get('button[id="login-submit"]').click();
     cy.get('a[href="https://triori.atlassian.net/secure/BrowseProjects.jspa?selectedProjectType=software"]').should('be.visible').click();
     cy.get('button[id="createGlobalItemIconButton"]').should('be.visible').click();

@@ -1,3 +1,8 @@
 {
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "env": {
+        "login": "triori@gmail.com",
+        "password": "3263985Trolls",
+        "loginURL": "https://id.atlassian.com/login"
+    }
 }
