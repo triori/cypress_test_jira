@@ -12,8 +12,8 @@ describe('Loggin, search poject and create ticket', () => {
     cy
       .get('input[data-testid="media-picker-file-input"]')
       .then(($inputForFile) => {
-        cy.wrap($inputForFile[0]).selectFile('testImg.png', { force: true });
-        cy.wrap($inputForFile[1]).selectFile('testImg.png', { force: true });
+        cy.wrap($inputForFile[0]).selectFile('cypress/fixtures/img/testImg.png', { force: true });
+        cy.wrap($inputForFile[1]).selectFile('cypress/fixtures/img/testImg.png', { force: true });
       })
       .then(() => {
         cy.wait(5000)
