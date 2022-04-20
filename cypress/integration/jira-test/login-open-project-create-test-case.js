@@ -30,5 +30,5 @@ describe('Loggin, search poject and create ticket', () => {
   it('Click create', () => {
     cy.wait(2000)
     cy.get('button[form="issue-create.ui.modal.create-form"]').click();
-  })
+  });
 });
